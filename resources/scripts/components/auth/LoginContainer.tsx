@@ -36,7 +36,7 @@ const LoginContainer = ({ history }: RouteComponentProps) => {
         const loginToken = getQuery().get("token");
 
         if(loginToken) {
-            addFlash({ type: "Info", title: "Logging In...", message: "You will be logged in momentarily." });
+            addFlash({ type: "info", title: "Logging In...", message: "You will be logged in momentarily." });
 
             setTimeout(() => {
 
