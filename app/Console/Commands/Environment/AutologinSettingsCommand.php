@@ -5,7 +5,7 @@ namespace Pterodactyl\Console\Commands\Environment;
 
 use Illuminate\Console\Command;
 use Illuminate\Contracts\Console\Kernel;
-use Pterodactyl\Traits\Command\EnvironmentWriterTrait;
+use Pterodactyl\Traits\Commands\EnvironmentWriterTrait;
 use Illuminate\Contracts\Config\Repository as ConfigRepository;
 
 class AutologinSettingsCommand extends Command {
