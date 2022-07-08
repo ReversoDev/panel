@@ -74,7 +74,7 @@ class AutologinSettingsCommand extends Command {
             $this->variables['AUTOLOGIN_KEY'] = $this->option('key') ?? $this->secret('API Key');
         }
 
-        $this->writeToEnviornment($this->variables);
+        $this->writeToEnvironment($this->variables);
         $this->info($this->console->output());
 
         return 0;
