@@ -43,10 +43,11 @@ class AutologinSettingsCommand extends Command {
     /**
      * AutologinSettings constructor
      */
-    public function __construct(ConfigRepository $config) {
+    public function __construct(ConfigRepository $config, Kernel $console) {
 
         parent::__construct();
 
+        $this->console = $console;
         $this->config = $config;
     }
 
@@ -58,8 +59,8 @@ class AutologinSettingsCommand extends Command {
         );
 
         $this->variables['AUTOLOGIN_CALLBACK'] = $this->option('url') ?? $this->ask(
-            'Autologin Callback (e.g. /auth/autologin)'
-            config ('autologin.callback', '/auth/autologin')
+            'Autologin Callback (e.g. /auth/autologin)',
+            config('autologin.callback', '/auth/autologin')
         );
 
         $askForKey = true;
