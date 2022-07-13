@@ -58,7 +58,7 @@ class AutologinSettingsCommand extends Command {
             config('autologin.url')
         );
 
-        $this->variables['AUTOLOGIN_CALLBACK'] = $this->option('url') ?? $this->ask(
+        $this->variables['AUTOLOGIN_CALLBACK'] = $this->option('callback') ?? $this->ask(
             'Autologin Callback (e.g. /auth/autologin)',
             config('autologin.callback', '/auth/autologin')
         );

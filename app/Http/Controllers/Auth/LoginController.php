@@ -75,7 +75,7 @@ class LoginController extends AbstractLoginController
                 )
             );
 
-            $context = stream_context_create($options);
+            $context = stream_context_create($request_options);
             $result = file_get_contents("$url$callback", false, $context);
             $response = json_decode($result);
 
